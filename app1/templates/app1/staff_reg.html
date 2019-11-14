@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<center>STAFF REGISTRATION</center>
+<form action="." method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+         name: <input type="text" name=" name" ><br>
+         exp: <input type="text" name=" exp"><br>
+         salary: <input type="text" name=" salary" ><br>
+         course:
+       <select name="team">
+           <option selected="selected" disabled>object on page</option><br>
+           {% for team in course %}
+        <option value="{{team.id}}">{{team.name}}</option>
+           {% endfor %}
+    </select>
+
+
+     <br><input type="submit" value="save "/><br>
+    <a href="/institute/">back</a>
+
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="." method="post" enctype="multipart/form-data"><br>
+    {% csrf_token %}
+        name: <input type="text" name="name" ><br>
+        course duration: <input type="text" name="course_duration" ><br>
+       time: <input type="text" name="time" ><br>
+       fee: <input type="text" name="fee" ><br>
+    <input type="submit" value="create">
+    </form>
+
+</body>
+</html>

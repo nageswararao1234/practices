@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:powderblue;">
+{% if course_list %}
+
+{% for course in course_list %}
+<h4>{{course.name}}</h4>
+{% endfor %}
+
+{% endif %}
+<a href="{%url 'app1:add_course'  %}">add</a>
+<a href="/institute/">back</a>
+
+</body>
+</html>

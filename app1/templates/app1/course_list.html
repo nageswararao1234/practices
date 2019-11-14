@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:powderblue;">
+<center><h3>STUDENT COURSE NAME</h3></center><br>
+{% for course in courselist %}
+<center><a href="{%url 'app1:student_list' course.id %}">{{course.name}}</a></center><br>
+{% endfor %}
+<a href="/institute/">back</a>
+
+</body>
+</html>

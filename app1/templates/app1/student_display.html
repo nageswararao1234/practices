@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="width:40%">
+  <tr>
+    <th>Student</th>
+    <th>Staff</th>
+    <th>Batch</th>
+      <th>time</th>
+      <th>paid</th>
+  </tr>
+    <tr>
+
+            {% for each in student_list %}
+            <td><a href="{%url 'app1:student_details' each.id %}">{{each}}</a></td>
+         {% endfor %}
+
+
+        {% for ea in staff_list %}
+        <td><a href="{%url 'app1:staff_details' ea.id %}">{{ea}}</a></td>
+         {% endfor %}
+
+
+        {% for student in students %}
+        <td>{{student.batch}}</td>
+        {% endfor %}
+
+        {% for c in course %}
+           {{c.time}}
+        {% endfor %}
+
+  </tr>
+
+
+</table>
+</body>
+</html>
+
+
+
